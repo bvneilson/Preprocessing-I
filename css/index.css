@@ -1,135 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-/* Set every element's box-sizing to border-box */
-* {
-  box-sizing: border-box;
-}
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css');
 html,
 body {
   height: 100%;
@@ -149,6 +18,7 @@ body {
 }
 nav {
   display: flex;
+  background-color: #E8E8E8;
 }
 nav a {
   text-decoration: none;
@@ -160,14 +30,112 @@ nav .active {
 }
 .intro {
   display: flex;
+  padding: 20px 0;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 .intro .intro-img {
-  width: 25%;
+  width: 35%;
 }
 .intro .intro-img img {
   width: 100%;
   height: auto;
+}
+.intro .intro-text {
+  width: 80%;
+  text-align: center;
+}
+.skills {
+  display: flex;
+  padding: 20px 0;
+  width: 80%;
+  margin: 0 10%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.skills .skills-header {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.skills .skill {
+  text-align: center;
+  width: 20%;
+  margin: 10px 1.5%;
+  padding-top: 16px;
+  background-color: #E8E8E8;
+}
+@media only screen and (max-width: 800px) {
+  .skills .skill {
+    width: 28%;
+    margin: 10px 2.5%;
+  }
+}
+.skills .skill ion-icon {
+  font-size: 2.4rem;
+}
+.work-history {
+  display: flex;
+  padding: 20px 0;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 10%;
+}
+.work-history .work-history-header {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.work-history .job {
+  display: flex;
+  justify-content: space-between;
+}
+.work-history .job p {
+  width: 25%;
+  text-align: center;
+}
+.work-history .job:nth-child(odd) {
+  background-color: #E8E8E8;
+}
+.contact {
+  display: flex;
+  padding: 20px 0;
+}
+.contact .contact-header {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 20px;
+}
+footer {
+  background-color: #333;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+footer .social {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 0 10px 0;
+}
+footer .social-link {
+  padding: 0 20px;
+}
+footer .social-link a {
+  text-decoration: none;
+  font-size: 32px;
+  color: white;
+  transition: 0.3s;
+}
+footer .social-link a:hover {
+  text-decoration: none;
+  color: white;
+}
+footer #copyright {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 5px;
 }
